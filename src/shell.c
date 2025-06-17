@@ -3,7 +3,7 @@
 void main(void) {
     while (1) {
 prompt:
-        printf("> ");
+        printf("$ ");
         char cmdline[128];
         for (int i = 0;; i++) {
             char ch = getchar();
@@ -32,6 +32,10 @@ prompt:
         }
         else if (strcmp(cmdline, "writefile") == 0)
             writefile("hello.txt", "Hello from shell!\n", 19);
+        else if (strcmp(cmdline, "help") == 0)
+            printf("Available commands: hello, exit, readfile, writefile, help\n");
+        else if (strcmp(cmdline, "") == 0)
+            continue; // empty command, just prompt again
         else
             printf("unknown command: %s\n", cmdline);
     }

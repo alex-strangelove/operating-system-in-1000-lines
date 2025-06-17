@@ -16,7 +16,7 @@
 #define PAGE_U    (1 << 4)
 #define USER_BASE 0x1000000
 #define FILES_MAX   2
-#define DISK_MAX_SIZE     align_up(sizeof(struct file) * FILES_MAX, SECTOR_SIZE)
+#define DISK_MAX_SIZE     (1024 * 1024)  // 1MB disk image
 #define SECTOR_SIZE       512
 #define VIRTQ_ENTRY_NUM   16
 #define VIRTIO_DEVICE_BLK 2

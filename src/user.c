@@ -34,7 +34,7 @@ int writefile(const char *filename, const char *buf, int len) {
 
 __attribute__((noreturn)) void exit(void) {
     syscall(SYS_EXIT, 0, 0, 0);
-    for (;;);
+    // for (;;);
 }
 
 __attribute__((section(".text.start")))
